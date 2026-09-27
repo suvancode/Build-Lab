@@ -1,7 +1,24 @@
 {
-  "name": "github-hub-api",
-  "version": "1.0.0",
-  "description": "Serverless API for GitHub Live Sites Hub",
+  "name": "build-lab",
+  "version": "2.0.0",
+  "description": "Build Lab - Live Project Hub & Developer Dashboard",
+  "main": "api/_lib.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "npx serve .",
+    "test": "node -e \"['api/_lib.js', 'api/auth.js', 'api/auth/change-password.js', 'api/sites.js', 'api/sites/[id].js', 'api/overrides.js', 'api/ping-site.js', 'api/export.js', 'api/ping.js'].forEach(f => require('./' + f)); console.log('All API modules validated.');\""
+  },
+  "keywords": [
+    "portfolio",
+    "dashboard",
+    "developer",
+    "github",
+    "live-sites",
+    "vercel",
+    "mongodb"
+  ],
+  "author": "Aditya Singh",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",

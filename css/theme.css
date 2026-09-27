@@ -1,0 +1,175 @@
+/* ═══════════════════════════════════════════════════════════════════
+   BUILD LAB — THEME ENGINE
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Default: Matrix Terminal Green */
+  --bg-base: #060906;
+  --bg-surface: #0a0f0a;
+  --bg-card: #0d140d;
+  --bg-card-hover: #121c12;
+  --bg-input: #080d08;
+  --bg-overlay: rgba(5, 10, 5, 0.85);
+
+  --accent: #22c55e;
+  --accent-glow: rgba(34, 197, 94, 0.35);
+  --accent-dim: #153b1b;
+  --accent-faint: #0d2311;
+  --accent-text: #041206;
+
+  --text-main: #dcfce7;
+  --text-muted: #65a30d;
+  --text-dim: #365314;
+
+  --border-subtle: #142814;
+  --border-strong: #225422;
+  --border-active: #22c55e;
+
+  --badge-live: #22c55e;
+  --badge-warning: #eab308;
+  --badge-error: #ef4444;
+  --badge-info: #38bdf8;
+  --badge-custom: #a855f7;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+}
+
+/* 02: Cyberpunk / Synthwave */
+body.theme-cyberpunk {
+  --bg-base: #080612;
+  --bg-surface: #0e0a1f;
+  --bg-card: #140e2b;
+  --bg-card-hover: #1b133b;
+  --bg-input: #0a0717;
+  --bg-overlay: rgba(8, 6, 18, 0.88);
+
+  --accent: #00f3ff;
+  --accent-glow: rgba(0, 243, 255, 0.4);
+  --accent-dim: #0a2d3b;
+  --accent-faint: #061922;
+  --accent-text: #041014;
+
+  --text-main: #f0fdf4;
+  --text-muted: #ff007f;
+  --text-dim: #9d174d;
+
+  --border-subtle: #241640;
+  --border-strong: #4a247a;
+  --border-active: #ff007f;
+
+  --badge-live: #00f3ff;
+  --badge-warning: #facc15;
+  --badge-error: #ff0055;
+  --badge-info: #00f3ff;
+  --badge-custom: #ff007f;
+}
+
+/* 03: Midnight Obsidian (Modern Clean Dark) */
+body.theme-midnight {
+  --bg-base: #090a0f;
+  --bg-surface: #10121a;
+  --bg-card: #151824;
+  --bg-card-hover: #1c2030;
+  --bg-input: #0c0e14;
+  --bg-overlay: rgba(9, 10, 15, 0.88);
+
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.35);
+  --accent-dim: #0c2b3d;
+  --accent-faint: #071924;
+  --accent-text: #031017;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #475569;
+
+  --border-subtle: #1e293b;
+  --border-strong: #334155;
+  --border-active: #38bdf8;
+
+  --badge-live: #10b981;
+  --badge-warning: #f59e0b;
+  --badge-error: #f43f5e;
+  --badge-info: #38bdf8;
+  --badge-custom: #818cf8;
+}
+
+/* 04: Dracula Hacker */
+body.theme-dracula {
+  --bg-base: #1e1f29;
+  --bg-surface: #282a36;
+  --bg-card: #2e303e;
+  --bg-card-hover: #383a4c;
+  --bg-input: #1e1f29;
+  --bg-overlay: rgba(30, 31, 41, 0.9);
+
+  --accent: #bd93f9;
+  --accent-glow: rgba(189, 147, 249, 0.35);
+  --accent-dim: #3c2f52;
+  --accent-faint: #251e33;
+  --accent-text: #171120;
+
+  --text-main: #f8f8f2;
+  --text-muted: #6272a4;
+  --text-dim: #44475a;
+
+  --border-subtle: #44475a;
+  --border-strong: #6272a4;
+  --border-active: #bd93f9;
+
+  --badge-live: #50fa7b;
+  --badge-warning: #f1fa8c;
+  --badge-error: #ff5555;
+  --badge-info: #8be9fd;
+  --badge-custom: #ff79c6;
+}
+
+/* 05: Amber CRT Phosphor */
+body.theme-amber {
+  --bg-base: #0f0a02;
+  --bg-surface: #171105;
+  --bg-card: #21190a;
+  --bg-card-hover: #2d220e;
+  --bg-input: #140e04;
+  --bg-overlay: rgba(15, 10, 2, 0.88);
+
+  --accent: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.35);
+  --accent-dim: #3d2703;
+  --accent-faint: #261802;
+  --accent-text: #130c01;
+
+  --text-main: #fef3c7;
+  --text-muted: #b45309;
+  --text-dim: #78350f;
+
+  --border-subtle: #291a05;
+  --border-strong: #4f3408;
+  --border-active: #f59e0b;
+
+  --badge-live: #fbbf24;
+  --badge-warning: #f59e0b;
+  --badge-error: #ef4444;
+  --badge-info: #38bdf8;
+  --badge-custom: #d97706;
+}
+
+/* Scanline Overlay (Toggleable) */
+.scanlines-enabled body::after {
+  content: " ";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.7;
+}
